@@ -1,0 +1,106 @@
+/* General Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(135deg, #00aaff, #aaff00);
+  font-family: 'Roboto', sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  color: white;
+}
+
+.app-container {
+  text-align: center;
+}
+
+/* Clock Styling */
+.clock-wrapper {
+  position: relative;
+  margin-bottom: 30px;
+}
+
+.clock {
+  position: relative;
+  width: 250px;
+  height: 250px;
+  border: 15px solid #fff;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  margin: 0 auto;
+}
+
+.hand {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform-origin: 100%;
+  transform: translateX(-50%) translateY(-50%);
+  transition-timing-function: steps(60);
+}
+
+.hour {
+  width: 10px;
+  height: 70px;
+  background-color: #fff;
+  border-radius: 10px;
+}
+
+.minute {
+  width: 6px;
+  height: 90px;
+  background-color: #fff;
+  border-radius: 8px;
+}
+
+.second {
+  width: 2px;
+  height: 100px;
+  background-color: #ff4d4d; /* Red for seconds */
+  border-radius: 5px;
+}
+
+.center {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #fff;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+/* Time and Date Styling */
+.time-date h1 {
+  font-size: 3rem;
+  margin-top: 20px;
+}
+
+.time-date p {
+  font-size: 1.5rem;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+@media (max-width: 600px) {
+  .clock {
+    width: 200px;
+    height: 200px;
+  }
+
+  .time-date h1 {
+    font-size: 2.5rem;
+  }
+
+  .time-date p {
+    font-size: 1rem;
+  }
+}
